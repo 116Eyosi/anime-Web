@@ -1,0 +1,366 @@
+:root{
+    --primery-color: #071F43;
+    --dark-color: #141414;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    -webkit-font-smoothing: antialiased;
+    /* color: white; */
+    font-family: 'arial', 'sans-serif';
+    position: relative;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.topnav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    z-index: 5;
+}
+
+.left{
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.right{
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left img{
+    width: 100px;
+    height: 80px;
+}
+
+.search{
+    position: relative;
+}
+
+.search input{
+    border-radius: 6px;
+}
+.search i{
+    position: absolute;
+    right: 5px;
+}
+.sideBar{
+    margin-right: 50px;
+}
+.tabDots{
+    margin-right: 10px;
+}
+
+/* navbar */
+
+.navbar{
+    position: absolute;
+    position: fixed;
+    width: 150px;
+    height: 100vh;
+    left: 0px;
+    background: #fff;
+    margin-top: 65px;
+    transition: all 0.5s;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    z-index: 5;
+}
+.navList li{
+    font-size: 18px;
+    padding: 10px 0;
+    list-style-type: none;
+    transition: all 0.2s;
+}
+.navList li:hover{
+    background: #888;
+    font-size: 20px;
+}
+.navList li:hover{
+    background-color: #888;
+    font-size: 20px;
+}
+
+/* display */
+
+main{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin-left: 180px;
+    padding-top: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.display{
+    color: #fff;
+    margin-top: 50px;
+    position: relative;
+    height: 450px;
+    width: 800px;
+    border-radius: 20px;
+    border: none;
+    background: url(images/attack-on-titan-final-chapter.jpg) center center no-repeat;
+    background-size:cover;
+}
+.display::after{
+    content:  " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.2);
+    box-shadow: inset 200px 0px 250px #000;
+}
+
+.displayTop{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+}
+.displayTop a{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    text-decoration: none;
+    color: white;
+    transform: translate(-50%, -50%);
+    color:#fff;
+}
+
+.displayMid{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    justify-content: center;
+    z-index: 2;
+    margin-left: 15px;
+}
+.displayMid a{
+    width: 15%;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.displayBottom{
+    margin-top: 50px;
+    position: relative;
+    height: 450px;
+    width: 800px;
+    border-radius: 20px;
+    border: none;
+    background-size:cover;
+    z-index: 3;
+}
+.displayBottom li img{
+    float: left;
+    width: 157px;
+    height: 100px;
+   padding-left: 10px ;
+   margin-top: 2rem;
+}
+
+
+
+/* screen bottom */
+
+.screen-bottom{
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 219px;
+    align-items: center;
+}
+
+.li-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.li-discription{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.links{
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+
+.profile{
+    width: 50px;
+    height: 35px;
+   padding-left: 10px ;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: rgba(179, 179, 179, 0.09);
+    border-radius: 0.5em;
+}
+
+.card-img{
+    object-fit: cover;
+}
+.title{
+    font-size: 0.7rem;
+}
+.subtitle{
+    font-size: 0.5rem;
+    padding: 0.4rem 0;
+}
+.card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5em;
+}
+.card-content-leading{
+    padding: 1rem 0;
+}
+.grid-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* styling */
+.btn{
+    display: inline-block;
+    background: var(--primery-color);
+    padding: 0.2rem 0.5rem;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    border-radius: 2px;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+.btn-rounded{
+    border-radius: 5px;
+}
+.btn-small{
+    font-size: 14px;
+}
+.dark{
+    color: #777;
+}
+hr{
+    height: 1px;
+    background-color: #888;
+    border: none;
+    width: 120px;
+}
+.txt-small{
+    font-size: 12px;
+}
+.padd-btm{
+    padding-bottom: 10px;
+}
+
+.padd-ryt{
+    padding-right: 10px;
+}
+
+
+
+/* media */
+
+@media(max-width: 960px){
+   .display{
+    width: 720px;
+    height: 300px;
+   }
+   .display .displayMid h1{
+    font-size: 16px;
+   }
+   .displayBottom{
+    display: none;
+    visibility: hidden;
+}
+
+
+.links{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    width: 50%;
+}
+.grid-tiles{
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+@media(max-width: 700px){
+    .display{
+        width: 450px;
+        height: 250px;
+    }
+    .display .displayMid h1{
+        font-size: 10px;
+    }
+    .grid-tiles{
+        grid-template-columns: 1fr;
+    }
+    .show{
+        display: none;
+        visibility: hidden;
+    }
+    .navbar{
+        width: 100px;
+        font-size: 12px;
+    }
+    hr{
+        width: 80px;
+    }
+
+}
